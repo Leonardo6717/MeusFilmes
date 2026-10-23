@@ -1,0 +1,43 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Editar filme" android:textColor="@color/text_primary"
+            android:textSize="28sp" android:textStyle="bold" android:layout_marginBottom="22dp" />
+        <ImageView android:id="@+id/previewImage" android:layout_width="140dp"
+            android:layout_height="200dp" android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop" android:contentDescription="Prévia do pôster"
+            android:background="#393445" android:layout_marginBottom="20dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Nome do filme" style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Nota (0 a 10)" android:layout_marginTop="12dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ratingInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="numberDecimal" android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="URL da foto / pôster" android:layout_marginTop="12dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/imageUrlInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textUri" android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/previewButton" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Visualizar foto" android:layout_marginTop="16dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Salvar alterações" android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
